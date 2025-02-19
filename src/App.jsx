@@ -39,8 +39,8 @@ function App() {
   //   setWeatherData({
   //     city: "Paris",
   //     country: "France",
-  //     iconId: "11n",
-  //     temperature: 0,
+  //     iconId: "01d",
+  //     temperature: 10,
   //     humidity: 60,
   //     hectopascals: 1013,
   //   });
