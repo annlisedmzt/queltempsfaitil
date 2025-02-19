@@ -39,7 +39,7 @@ function App() {
   //   setWeatherData({
   //     city: "Paris",
   //     country: "France",
-  //     iconId: "13d",
+  //     iconId: "11n",
   //     temperature: 0,
   //     humidity: 60,
   //     hectopascals: 1013,
@@ -65,15 +65,15 @@ function App() {
 
   function getTemperatureMessage(temperature) {
     if (temperature <= 0) {
-      return "Il fait super froid, mets un bon pull, des gants, une écharpe, IL FAIT FROID ON A DIT!"
+      return "Il fait super froid. 🥶"
     } else if (temperature >= 1 && temperature <= 10) {
-      return "Il fait froid, n'oublie pas ta doudoune."
+      return "Il fait froid, n'oublie pas ta doudoune. "
     } else if (temperature >= 11 && temperature <= 20) {
       return "Il fait frais, un p'tit pull est de mise."
     } else if (temperature >= 21 && temperature <= 25) {
-      return "Il fait bon, tu peux te poser en terrasse ou lire un bon livre au parc."
+      return "Il fait bon, tu peux te poser en terrasse ou lire un bon livre au parc. 🍻​"
     } else {
-      return "Il fait chaud, oublie pas de t'hydrater."
+      return "Il fait chaud, n'oublie pas de t'hydrater. 🥵​"
     }
   }
 
@@ -103,9 +103,8 @@ function App() {
 
       {weatherData && (
         <>
-          <p className="city">{weatherData.city}</p>
+          <p className="city">{weatherData.city} <br /> <span className="date">{formattedDate}</span> </p>
           {/* <p className="country-name">{weatherData.country}</p> */}
-          <p className="date">{formattedDate}</p>
           <div className="icon-container">
             <img src={`/icons/${weatherData.iconId}.svg`} className="icon" alt="weather icon" />
           </div>
